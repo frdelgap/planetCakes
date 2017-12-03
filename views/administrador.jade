@@ -1,0 +1,17 @@
+extends layout
+
+block content  
+  .container    
+    h2.form-signin-heading BLOG  - PLANET CAKES  - Administrador
+    form(role='form', action='/login',method='post').form-signin        
+      label.sr-only(for='username') Username        
+      input#username.form-control(type='text', name="username" , placeholder='Introduce Username', required='', autofocus='')        
+      label.sr-only(for='password') Password        
+      input#password.form-control(type='password',name="password", placeholder='Password', required='')                        
+      .col-lg-6  
+        a(href='/login')          
+        button.btn.btn-lg.btn-primary.btn-block(type='submit') Entrada Administrador
+      .col-lg-6          
+        a(href='/')            
+          button.btn.btn-lg.btn-secondary.btn-block(type="button") Cancelar
+      

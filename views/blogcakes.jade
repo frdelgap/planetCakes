@@ -1,0 +1,19 @@
+extends layout
+
+block content  
+  .container
+  <span class="NombreBlog"> BLOG - PLANET CAKES </span>
+  hr
+  <b><span class="HeaderViaje"> Comentarios de los usuarios </span></b>
+  br
+  hr
+  hr
+  form(role='form', action="/blogcakes",method="post").form-signin      
+    label Publicar un comentario en planetCakes     
+    p
+      textarea(name='comentario', placeholder='Introduce un comentario', rows='3', cols='50', font-size='10')
+    hr
+    .col-lg-6        
+      button.btn.btn-lg.btn-primary.btn-block(type='submit') Registrar comentario  
+    label _____________________________________________________________________________________________
+  

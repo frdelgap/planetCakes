@@ -1,0 +1,56 @@
+doctype html
+html(lang='es')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial- scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title=title
+    //Bootstrap core CSS
+    link(href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css', rel='stylesheet')
+    script(src='http://code.jquery.com/jquery-1.11.2.min.js')
+    //CSS file
+    //| <style type='text/css'>
+    //include ../public/stylesheets/test.css
+    //| </style>
+    //Bootstrap Javascript
+    script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js')
+    style.      
+      .HeaderViaje {color:black;font-style:italic;padding:58px; width:70%; font: 30px italic; bottom:100; margin: 40px; align='center';}
+      .BlogViaje {color:blue;font-style:italic;padding:28px; width:70%; font: 15px Helvetica, italic; bottom:100;}
+      .NombreBlog {color:grey;font-style:italic;padding:18px; width:70%; font: 40px italic; bottom:0}
+      .privado {color:grey; font-style:italic;}
+      .Error {color:red;}
+  body
+    .navbar.navbar-inverse
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        .collapse.navbar-collapse
+          .pull-left
+            ul.nav.navbar-nav
+              li
+                if (user)
+                  a(href='/')  Hola #{user.username}  
+          .pull-right
+            ul.nav.navbar-nav
+              li
+                a(href='/administrador') administrador
+              li
+                a(href='http://localhost:3000/sobremi') sobre mi
+              li
+                a(href='/logout') cerrar sesión
+    .jumbotron
+      .container
+        block content
+
+    // jQuery
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+    // Bootstrap 3.3.6 JavaScript
+    // <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" //crossorigin="anonymous"></script>
+    // Bootstrap 4.0.0-a2JavaScript
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js', integrity='sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7', crossorigin='anonymous')
+    
