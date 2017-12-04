@@ -17,9 +17,10 @@ var expressSession = require('express-session');
 var app = express();
 
 //Conexion BD var 
-dbConfig = require('./db.js'); 
+//dbConfig = require('./db.js'); 
 var mongoose = require('mongoose'); 
-mongoose.connect(dbConfig.url); 
+//mongoose.connect(dbConfig.url); 
+mongoose.connect(process.env.MONGODB_URI);
 
 //var index = require('./routes/index');
 var routes = require('./routes/index');
